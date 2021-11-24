@@ -61,7 +61,7 @@ class MyApp(tk.Tk):
         container.pack(side="top", fill='both', expand=True)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
-        container.config(bg="#3cd070")
+        container.config(bg="#0D5176")
 
         frame = tk.Frame(self, padx=50, pady=50)
         frame.pack()
@@ -82,7 +82,7 @@ class FrameOne(tk.Frame):
 
         self.i = -1
 
-        self.label1 = tk.Label(self, pady=40, bg="#EA4C46", font='Helvetica 24  bold',
+        self.label1 = tk.Label(self, pady=40, bg="#0D98BA", font='Helvetica 24  bold',
                                borderwidth=10, relief="raised")
         self.label1.pack()
         self.every5sec()
