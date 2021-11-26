@@ -5,14 +5,9 @@ from multiprocessing import Process
 import tkinter as tk
 
 
-# global vars
-ii = 0
-qq = queue.Queue()
-
-
 def putting_queue(q1, num_of_el):
+    ii = 0
     while True:
-        global ii
         ii += 1
         # print('starting thread')
         # putting an e^2 every 5 seconds
@@ -25,7 +20,7 @@ def putting_queue(q1, num_of_el):
 
 
 def ququ1():
-    global qq
+    qq = queue.Queue()
     # with concurrent.futures.ProcessPoolExecutor() as executor:
     #     qq = executor.map(putting_queue(qq, 3))
     putting_queue_process = Process(target=putting_queue(qq, 3))
